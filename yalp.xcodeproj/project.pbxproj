@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCACB75219CBDCDC00B65709 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */; };
+		FCACB75419CCA1B200B65709 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACB75319CCA1B200B65709 /* SearchResultsViewController.swift */; };
 		FCBA52FB19CB3EF000255BA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBA52FA19CB3EF000255BA5 /* AppDelegate.swift */; };
-		FCBA52FD19CB3EF000255BA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBA52FC19CB3EF000255BA5 /* ViewController.swift */; };
 		FCBA530019CB3EF000255BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBA52FE19CB3EF000255BA5 /* Main.storyboard */; };
 		FCBA530219CB3EF000255BA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBA530119CB3EF000255BA5 /* Images.xcassets */; };
 		FCBA530519CB3EF000255BA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCBA530319CB3EF000255BA5 /* LaunchScreen.xib */; };
@@ -26,10 +27,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultTableViewCell.swift; path = Views/SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		FCACB75319CCA1B200B65709 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = Controllers/SearchResultsViewController.swift; sourceTree = "<group>"; };
 		FCBA52F519CB3EF000255BA5 /* yalp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yalp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBA52F919CB3EF000255BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCBA52FA19CB3EF000255BA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCBA52FC19CB3EF000255BA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCBA52FF19CB3EF000255BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCBA530119CB3EF000255BA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCBA530419CB3EF000255BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCACB75019CBDBCA00B65709 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCACB75319CCA1B200B65709 /* SearchResultsViewController.swift */,
+				FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		FCBA52EC19CB3EF000255BA5 = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				FCBA52FA19CB3EF000255BA5 /* AppDelegate.swift */,
-				FCBA52FC19CB3EF000255BA5 /* ViewController.swift */,
 				FCBA52FE19CB3EF000255BA5 /* Main.storyboard */,
+				FCACB75019CBDBCA00B65709 /* Controllers */,
 				FCBA530119CB3EF000255BA5 /* Images.xcassets */,
 				FCBA530319CB3EF000255BA5 /* LaunchScreen.xib */,
 				FCBA52F819CB3EF000255BA5 /* Supporting Files */,
@@ -212,8 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCBA52FD19CB3EF000255BA5 /* ViewController.swift in Sources */,
 				FCBA52FB19CB3EF000255BA5 /* AppDelegate.swift in Sources */,
+				FCACB75419CCA1B200B65709 /* SearchResultsViewController.swift in Sources */,
+				FCACB75219CBDCDC00B65709 /* SearchResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				FCBA531619CB3EF100255BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCBA531719CB3EF100255BA5 /* Build configuration list for PBXNativeTarget "yalpTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				FCBA531919CB3EF100255BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
