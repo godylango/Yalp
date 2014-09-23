@@ -36,6 +36,9 @@ class SearchResultTableViewCell: UITableViewCell {
         self.businessImageView.layer.cornerRadius = 5.0
         self.businessImageView.clipsToBounds = true
         self.ratingImageView.setImageWithURL(NSURL(string: business.ratingImgUrl))
+        
+        self.addressLabel.text = business.address
+        self.categoriesLabel.text = business.categories
     }
 
 }

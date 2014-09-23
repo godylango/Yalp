@@ -13,7 +13,8 @@ class Business {
     let ratingImgUrl: String!
     let numReviews: Int!
     let businessImgUrl: String!
-    let address: String!
+    var address: String!
+    var categories: String! = ""
    
     class func fromResponse(responseData: [NSDictionary]) -> [Business] {
         return responseData.map {
@@ -26,5 +27,23 @@ class Business {
         self.ratingImgUrl = attrs["rating_img_url"] as String
         self.businessImgUrl = (attrs["image_url"] ?? "") as String
         self.numReviews = attrs["review_count"] as Int
+        
+        if let cat = attrs["categories"] {
+            var categories = attrs["categories"] as [[String]]
+            for category in categories {
+                if countElements(self.categories) > 0 {
+                    self.categories = self.categories + ", " + category[0] as String!
+                } else {
+                    self.categories = category[0]
+                }
+            }
+        }
+
+        self.address = ""
+        if let loc = attrs["location"] as? NSDictionary {
+            if (loc["address"] as? NSArray)?.count > 0 {
+                self.address = (loc["address"] as NSArray)[0] as String
+            }
+        }
     }
 }

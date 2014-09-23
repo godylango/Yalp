@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="382" y="379"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Settings View Controller-->
         <scene sceneID="oEi-vg-6bW">
             <objects>
-                <viewController id="J7J-FU-j9H" sceneMemberID="viewController">
+                <viewController id="J7J-FU-j9H" customClass="SearchSettingsViewController" customModule="yalp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fYC-37-vg7"/>
                         <viewControllerLayoutGuide type="bottom" id="a6Q-fw-jTe"/>
@@ -189,9 +189,39 @@
                     <view key="view" contentMode="scaleToFill" id="Bzd-td-cEf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="sS6-Ko-b88">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="setting" id="boe-Wd-Fp4">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boe-Wd-Fp4" id="dm3-MH-vs7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lalala" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocm-qg-SER">
+                                                    <rect key="frame" x="61" y="8" width="40" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J7J-FU-j9H" id="nAW-QX-QhE"/>
+                                    <outlet property="delegate" destination="J7J-FU-j9H" id="JTM-9B-bGQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NwN-zb-lYW"/>
+                    <connections>
+                        <outlet property="searchSettingsTableView" destination="sS6-Ko-b88" id="aBM-dv-LAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2m-Js-zT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
