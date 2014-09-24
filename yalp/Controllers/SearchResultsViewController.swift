@@ -13,7 +13,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var searchResultsTable: UITableView!
 
     let searchBar: UISearchBar = UISearchBar(frame: CGRectZero)
-    let searcher: YelpSearcher = YelpSearcher()
+    let searcher: YelpSearcher = YelpSearcher.searcher()
     
     override func viewDidLoad() {
         super.viewDidLoad()

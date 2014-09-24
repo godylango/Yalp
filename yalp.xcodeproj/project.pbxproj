@@ -10,6 +10,10 @@
 		F04C57D0BD5B405FB5ADBCEE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E952277C5A94E4E9020F23C /* libPods.a */; };
 		FC0D1C0519D152C3007F53EF /* SearchSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D1C0419D152C3007F53EF /* SearchSettingsViewController.swift */; };
 		FC0D1C0719D15310007F53EF /* SearchSettingsTableView in Sources */ = {isa = PBXBuildFile; fileRef = FC0D1C0619D15310007F53EF /* SearchSettingsTableView */; };
+		FC0D1C0919D161EF007F53EF /* RadiusSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D1C0819D161EF007F53EF /* RadiusSettingTableViewCell.swift */; };
+		FC0D1C0B19D1D412007F53EF /* YalpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D1C0A19D1D412007F53EF /* YalpNavigationController.swift */; };
+		FC2E151419D26F9F0056142A /* DealsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E151319D26F9F0056142A /* DealsViewCell.swift */; };
+		FC32E3B819D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32E3B719D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift */; };
 		FC5E7C3019CFA3E700625926 /* business.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E7C2F19CFA3E700625926 /* business.swift */; };
 		FCACB75219CBDCDC00B65709 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */; };
 		FCACB75419CCA1B200B65709 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACB75319CCA1B200B65709 /* SearchResultsViewController.swift */; };
@@ -38,6 +42,10 @@
 		9B2B2661C2A24D2DAEC28B24 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FC0D1C0419D152C3007F53EF /* SearchSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSettingsViewController.swift; sourceTree = "<group>"; };
 		FC0D1C0619D15310007F53EF /* SearchSettingsTableView */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchSettingsTableView; sourceTree = "<group>"; };
+		FC0D1C0819D161EF007F53EF /* RadiusSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusSettingTableViewCell.swift; sourceTree = "<group>"; };
+		FC0D1C0A19D1D412007F53EF /* YalpNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YalpNavigationController.swift; sourceTree = "<group>"; };
+		FC2E151319D26F9F0056142A /* DealsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewCell.swift; sourceTree = "<group>"; };
+		FC32E3B719D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusCollapsedSettingTableViewCell.swift; sourceTree = "<group>"; };
 		FC5E7C2F19CFA3E700625926 /* business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = business.swift; sourceTree = "<group>"; };
 		FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultTableViewCell.swift; path = Views/SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		FCACB75319CCA1B200B65709 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultsViewController.swift; path = Controllers/SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 		FCBA52EC19CB3EF000255BA5 = {
 			isa = PBXGroup;
 			children = (
+				FC2E151319D26F9F0056142A /* DealsViewCell.swift */,
+				FC0D1C0819D161EF007F53EF /* RadiusSettingTableViewCell.swift */,
+				FC0D1C0A19D1D412007F53EF /* YalpNavigationController.swift */,
+				FC32E3B719D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift */,
 				FC0D1C0419D152C3007F53EF /* SearchSettingsViewController.swift */,
 				FC0D1C0619D15310007F53EF /* SearchSettingsTableView */,
 				FC5E7C2F19CFA3E700625926 /* business.swift */,
@@ -296,7 +308,11 @@
 				FCBA52FB19CB3EF000255BA5 /* AppDelegate.swift in Sources */,
 				FC5E7C3019CFA3E700625926 /* business.swift in Sources */,
 				FC0D1C0719D15310007F53EF /* SearchSettingsTableView in Sources */,
+				FC32E3B819D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift in Sources */,
+				FC0D1C0919D161EF007F53EF /* RadiusSettingTableViewCell.swift in Sources */,
 				FCACB75C19CFA24600B65709 /* YelpSearcher.swift in Sources */,
+				FC2E151419D26F9F0056142A /* DealsViewCell.swift in Sources */,
+				FC0D1C0B19D1D412007F53EF /* YalpNavigationController.swift in Sources */,
 				FCACB75619CF925F00B65709 /* YelpNavigationBar.swift in Sources */,
 				FCACB75419CCA1B200B65709 /* SearchResultsViewController.swift in Sources */,
 				FCACB75219CBDCDC00B65709 /* SearchResultTableViewCell.swift in Sources */,

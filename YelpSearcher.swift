@@ -5,7 +5,12 @@
 //  Created by dylan on 9/21/14.
 //  Copyright (c) 2014 ClarkProvisions. All rights reserved.
 //
+var _searcher: YelpSearcher = YelpSearcher()
+
 class YelpSearcher {
+    class func searcher() -> YelpSearcher {
+        return _searcher
+    }
     let client: YelpClient!
     var results: [Business] = []
     let yelpConsumerKey = "uKy-HEYpR2HzEx5Vh0nBOw"
