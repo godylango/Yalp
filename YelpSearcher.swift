@@ -22,11 +22,14 @@ class YelpSearcher {
     var radius: String = "10000"
     var deals: String = "false"
     
+    var lastTerm: String = ""
+    
     init () {
         client = YelpClient(consumerKey: yelpConsumerKey, consumerSecret: yelpConsumerSecret, accessToken: yelpToken, accessSecret: yelpTokenSecret)
     }
     
     func search(term: String, onSuccess: (() -> Void)) {
+        self.lastTerm = term
         
         var parameters = ["term": term,
             "location": "San Francisco",

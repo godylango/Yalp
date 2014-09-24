@@ -200,13 +200,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="boe-Wd-Fp4" id="dm3-MH-vs7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocm-qg-SER">
-                                                    <rect key="frame" x="61" y="8" width="91" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Show Categories..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocm-qg-SER">
+                                                    <rect key="frame" x="12" y="0.0" width="146" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ocm-qg-SER" firstAttribute="leading" secondItem="dm3-MH-vs7" secondAttribute="leadingMargin" constant="4" id="Efw-ef-w3Q"/>
+                                                <constraint firstAttribute="centerY" secondItem="Ocm-qg-SER" secondAttribute="centerY" id="IeR-6w-un1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="radiusCell" id="hk4-6V-0S6" customClass="RadiusSettingTableViewCell" customModule="yalp" customModuleProvider="target">
@@ -309,6 +313,42 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dealsSwitch" destination="NmD-BS-lY3" id="TqX-eW-jDd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sortByCell" id="UeQ-aH-3oM" customClass="SortBySettingTableViewCell" customModule="yalp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UeQ-aH-3oM" id="QhO-uM-pg6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Meters" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufw-dl-Woa">
+                                                    <rect key="frame" x="12" y="11" width="86.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nj5-Jl-BQg">
+                                                    <rect key="frame" x="558" y="4" width="30" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <state key="normal" title="✓">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didCheck:" destination="UeQ-aH-3oM" eventType="touchUpInside" id="TvF-AX-lYB"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Ufw-dl-Woa" secondAttribute="centerY" id="4XO-9Z-tF6"/>
+                                                <constraint firstAttribute="centerY" secondItem="nj5-Jl-BQg" secondAttribute="centerY" id="OEV-AA-Gbr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nj5-Jl-BQg" secondAttribute="trailing" constant="4" id="hYx-br-0Yd"/>
+                                                <constraint firstItem="Ufw-dl-Woa" firstAttribute="leading" secondItem="QhO-uM-pg6" secondAttribute="leadingMargin" constant="4" id="pjL-u8-Dzh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkButton" destination="nj5-Jl-BQg" id="mAw-R1-jgi"/>
+                                            <outlet property="descriptionLabel" destination="Ufw-dl-Woa" id="bjr-VL-csh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

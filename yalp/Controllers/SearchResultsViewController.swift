@@ -23,6 +23,11 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         installSearchBar()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.searcher.search(self.searcher.lastTerm, onSuccess: self.searchResultsTable.reloadData)
+        println(self.searcher.lastTerm)
+    }
+    
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         println(searchBar.text)
     }
@@ -35,7 +40,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     func installSearchBar() {
         self.searchBar.delegate = self
         self.navigationItem.titleView = searchBar
-        self.searcher.search("thai", onSuccess: self.searchResultsTable.reloadData)
+        (self.navigationItem.titleView as UISearchBar).text = self.searcher.lastTerm
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

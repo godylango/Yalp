@@ -13,6 +13,7 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
     @IBAction func didTapSearch(sender: AnyObject) {
         self.searcher.deals = self.deals ? "true" : "false"
         self.searcher.radius = "\(self.radius)"
+        self.searcher.sort = "\(self.sortBy)"
         self.navigationController?.popViewControllerAnimated(true)
     }
     @IBOutlet weak var searchSettingsTableView:UITableView!
@@ -20,12 +21,15 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
     var searcher: YelpSearcher = YelpSearcher.searcher()
     var deals: Bool = false
     var radius: Int = 100
+    var sortBy: Int = 0
+    var sortByExpanded: Bool = false
     var distanceExpanded: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.deals = self.searcher.deals == "true"
         self.radius = self.searcher.radius.toInt()!
+        self.sortBy = self.searcher.sort.toInt()!
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +46,7 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
         case 0: // Category
             return 1
         case 1: // Sort by
-            return 1
+            return self.sortByExpanded ? 3 : 1
         case 2: // Distance
             return self.distanceExpanded ? 3 : 1
         case 3:// Deals
@@ -69,6 +73,8 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch indexPath.section {
+        case 1:
+            return getSortByCell(indexPath)
         case 2:
             return getDistanceCell(indexPath)
         case 3:
@@ -77,6 +83,23 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
             return searchSettingsTableView.dequeueReusableCellWithIdentifier("setting") as UITableViewCell
         }
 
+    }
+    
+    func getSortByCell(indexPath: NSIndexPath) -> UITableViewCell {
+        let sortMethods:[String] = ["Best Match", "Distance", "Highest Rated"]
+        if self.sortByExpanded {
+            var cell = searchSettingsTableView.dequeueReusableCellWithIdentifier("sortByCell") as SortBySettingTableViewCell
+            cell.configure(sortMethods[indexPath.row], isActive: indexPath.row == self.sortBy, onCheck: {
+                self.sortBy = indexPath.row
+                self.toggleSortByClosed()
+            })
+            return cell
+        } else {
+            var cell = searchSettingsTableView.dequeueReusableCellWithIdentifier("radiusCollapsedCell") as RadiusCollapsedSettingTableViewCell
+            cell.currentRadiusLabel.text = "Sort By \(sortMethods[self.sortBy])"
+            self.setUpTapAction(cell, action: "toggleSortByOpen")
+            return cell
+        }
     }
     
     func getDealsCell() -> UITableViewCell {
@@ -89,17 +112,7 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
     
     func getDistanceCell(indexPath: NSIndexPath) -> UITableViewCell {
         if distanceExpanded {
-            var amount: Int = 0
-            switch indexPath.row {
-            case 0:
-                amount = 100
-            case 1:
-                amount = 1000
-            case 2:
-                amount = 10000
-            default:
-                amount = 0
-            }
+            var amount: Int = [100, 1000, 10000][indexPath.row]
             var cell = searchSettingsTableView.dequeueReusableCellWithIdentifier("radiusCell") as RadiusSettingTableViewCell
             cell.configure(indexPath.row, amount: amount, isActive: amount == self.radius, onCheck: {
                     self.radius = amount
@@ -121,6 +134,15 @@ class SearchSettingsViewController: UIViewController, UITableViewDelegate, UITab
     func toggleDistanceClosed() {
         self.distanceExpanded = false
         self.searchSettingsTableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
+    
+    func toggleSortByOpen() {
+        self.sortByExpanded = true
+        self.searchSettingsTableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
+    func toggleSortByClosed() {
+        self.sortByExpanded = false
+        self.searchSettingsTableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Automatic)
     }
     
     func setUpTapAction(cell: UITableViewCell, action: Selector) {

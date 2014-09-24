@@ -1,5 +1,5 @@
 //
-//  RadiusSettingTableViewCell.swift
+//  SortBySettingTableViewCell.swift
 //  yalp
 //
 //  Created by dylan on 9/23/14.
@@ -8,39 +8,29 @@
 
 import UIKit
 
-class RadiusSettingTableViewCell: UITableViewCell {
-
-    var amount: Int = 0
+class SortBySettingTableViewCell: UITableViewCell {
     var onCheck: (() -> Void) = {}
-    var descriptionText: String {
-        get {
-            return "\(self.amount) Meters"
-        }
-    }
-
     
-    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBAction func onChecked(sender: AnyObject) {
+    @IBOutlet weak var checkButton: UIButton!
+    @IBAction func didCheck(sender: AnyObject) {
+                    self.checkButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         self.onCheck()
-    }
-
-    
-    func configure(number: Int, amount: Int, isActive: Bool, onCheck: (() -> Void)) {
-        self.amount = amount
-        self.onCheck = onCheck
-        self.descriptionLabel.text = self.descriptionText
         
+    }
+    func configure(method: String, isActive: Bool, onCheck: (() -> Void)) {
+        self.descriptionLabel.text = method
+        self.onCheck = onCheck
         if isActive {
             self.checkButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         } else {
             self.checkButton.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
         }
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-     }
+    }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

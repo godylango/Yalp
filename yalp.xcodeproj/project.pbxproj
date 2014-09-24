@@ -13,6 +13,7 @@
 		FC0D1C0919D161EF007F53EF /* RadiusSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D1C0819D161EF007F53EF /* RadiusSettingTableViewCell.swift */; };
 		FC0D1C0B19D1D412007F53EF /* YalpNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D1C0A19D1D412007F53EF /* YalpNavigationController.swift */; };
 		FC2E151419D26F9F0056142A /* DealsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E151319D26F9F0056142A /* DealsViewCell.swift */; };
+		FC2E151619D2817D0056142A /* SortBySettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E151519D2817D0056142A /* SortBySettingTableViewCell.swift */; };
 		FC32E3B819D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32E3B719D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift */; };
 		FC5E7C3019CFA3E700625926 /* business.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E7C2F19CFA3E700625926 /* business.swift */; };
 		FCACB75219CBDCDC00B65709 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 		FC0D1C0819D161EF007F53EF /* RadiusSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusSettingTableViewCell.swift; sourceTree = "<group>"; };
 		FC0D1C0A19D1D412007F53EF /* YalpNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YalpNavigationController.swift; sourceTree = "<group>"; };
 		FC2E151319D26F9F0056142A /* DealsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewCell.swift; sourceTree = "<group>"; };
+		FC2E151519D2817D0056142A /* SortBySettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortBySettingTableViewCell.swift; sourceTree = "<group>"; };
 		FC32E3B719D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusCollapsedSettingTableViewCell.swift; sourceTree = "<group>"; };
 		FC5E7C2F19CFA3E700625926 /* business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = business.swift; sourceTree = "<group>"; };
 		FCACB75119CBDCDC00B65709 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultTableViewCell.swift; path = Views/SearchResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				FC0D1C0819D161EF007F53EF /* RadiusSettingTableViewCell.swift */,
 				FC0D1C0A19D1D412007F53EF /* YalpNavigationController.swift */,
 				FC32E3B719D256D800D5E68C /* RadiusCollapsedSettingTableViewCell.swift */,
+				FC2E151519D2817D0056142A /* SortBySettingTableViewCell.swift */,
 				FC0D1C0419D152C3007F53EF /* SearchSettingsViewController.swift */,
 				FC0D1C0619D15310007F53EF /* SearchSettingsTableView */,
 				FC5E7C2F19CFA3E700625926 /* business.swift */,
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2E151619D2817D0056142A /* SortBySettingTableViewCell.swift in Sources */,
 				FCACB75A19CFA17500B65709 /* YelpClient.swift in Sources */,
 				FCBA52FB19CB3EF000255BA5 /* AppDelegate.swift in Sources */,
 				FC5E7C3019CFA3E700625926 /* business.swift in Sources */,
